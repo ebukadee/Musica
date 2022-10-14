@@ -2,24 +2,65 @@ import { data } from "../data/fetch";
 import { Heart } from "iconsax-react";
 import "../index.css";
 
+// const TopChart = () => {
+//   return (
+//     <div className="lg:flex lg:flex-col lg:ml-10">
+//       <h2 className="pt-[50px] pb-[20px] lg:pb-[0px]">Top Charts</h2>
+
+//       <div className={`flex flex-row  scroll overflow-auto w-auto`}>
+//         <div className="flex lg:flex-col ">
+//           {data.map((song) => (
+//             <div
+//               className={` bg-darker lg:w-[30vw] w-[80vw] mt-7 lg:mt-3 px-3 py-3 lg:flex lg:items-center lg:justify-between ${
+//                 data[0] !== song ? "ml-3 lg:ml-0" : "ml-0"
+//               } rounded-xl ${data.indexOf(song) >= 3 ? "lg:hidden" : "lg:block"}`}>
+//               <div className="flex justify-between lg:justify-start lg:items">
+//                 <img className="w-[70px] h-[70px]" src={song.link} alt="" />
+//                 <div className="lg:ml-5">
+//                   <h3 className="  font-extralight pt-3">{song.name}</h3>
+//                   <h5 className="text-dimWhite text-xs font-extralight pt-1">{song.artist}</h5>
+//                   <p className="  font-extralight pt-3">{song.length}</p>
+//                 </div>
+//               </div>
+//               <Heart className="mr-10" />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TopChart;
+
 const TopChart = () => {
   return (
-    <div className={`flex flex-row  scroll overflow-auto w-auto`}>
-      <div className="flex">
-        {data.map((song) => (
-          <div
-            className={` bg-darker w-[80vw]  px-3 py-3 ${
-              data[0] !== song ? "ml-3" : "ml-0"
-            } rounded-xl `}>
-            <div className="flex justify-between">
-              <img className="w-[100px] h-[100px]" src={song.link} alt="" />
-              <Heart />
+    <div className="lg:flex lg:flex-col lg:ml-10">
+      <h2 className="pt-[50px] pb-[20px] lg:pb-[0px]">Top Charts</h2>
+
+      <div className={`flex flex-row  scroll overflow-auto w-auto`}>
+        <div className="flex lg:flex-col ">
+          {data.map((song) => (
+            <div
+              className={` bg-darker lg:w-[30vw] w-[80vw] mt-7 lg:mt-3 px-3 py-3 flex lg:flex  lg:items-center justify-between lg:justify-between ${
+                data[0] !== song ? "ml-3 lg:ml-0" : "ml-0"
+              } rounded-xl ${data.indexOf(song) >= 3 ? "lg:hidden" : "lg:block"}`}>
+              <div className="lg:flex justify-between lg:justify-start lg:items ">
+                <img
+                  className="lg:w-[70px] lg:h-[70px] w-[100px] h-[100px]"
+                  src={song.link}
+                  alt=""
+                />
+                <div className="lg:ml-5">
+                  <h3 className="  font-extralight pt-3">{song.name}</h3>
+                  <h5 className="text-dimWhite text-xs font-extralight pt-1">{song.artist}</h5>
+                  <p className="  font-extralight pt-3">{song.length}</p>
+                </div>
+              </div>
+              <Heart className="mr-3 mt-3" />
             </div>
-            <h3 className="  font-extralight pt-3">{song.name}</h3>
-            <h5 className="text-dimWhite text-xs font-extralight pt-1">{song.artist}</h5>
-            <p className="  font-extralight pt-3">{song.length}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

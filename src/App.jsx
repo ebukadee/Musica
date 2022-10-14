@@ -12,10 +12,17 @@ const App = () => {
       <header className="bg-dark h-[100vh] overflow-x-hidden  p-5 ">
         <Navbar />
         <Search />
-        <Hero />
-        <h2 className="pt-[50px] pb-[20px] ">Top Charts</h2>
-        <TopChart />
-        <h2 className="py-[20px]">New Releases</h2>
+        <div className="lg:flex  lg:relative lg:left-20">
+          <Hero />
+          <TopChart />
+        </div>
+        <h2 className=" pl-20 mt-20  pb-[10px]">New Releases</h2>
+        <NewReleases />
+        <NewReleases />
+        <NewReleases />
+        <NewReleases />
+        <NewReleases />
+        <NewReleases />
         <NewReleases />
       </header>
       <Playing />

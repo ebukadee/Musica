@@ -2,7 +2,7 @@ import { Home, MusicPlaylist, Radio, Video, User, Logout } from "iconsax-react";
 
 const Navbar = () => {
   return (
-    <nav className=" hidden fixed  flex-col items-start top-12 ">
+    <nav className=" hidden lg:fixed  lg:flex lg:flex-col lg:items-start lg:top-12 ">
       {" "}
       <ul className="mt-10 bg-darker rounded-3xl px-3 pt-2 pb-4">
         <li className="mt-5">
