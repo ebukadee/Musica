@@ -5,8 +5,11 @@ import Playing from "./components/Playing";
 import Popular from "./components/Popular";
 import Search from "./components/Search";
 import TopChart from "./components/TopCharts";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const App = () => {
+  const queryClient = new QueryClient();
+
   return (
     <>
       <header className="bg-dark h-[100vh] overflow-x-hidden  p-5 ">
@@ -14,14 +17,12 @@ const App = () => {
         <Search />
         <div className="lg:flex  lg:relative lg:left-20">
           <Hero />
-          <TopChart />
+
+          <QueryClientProvider client={queryClient}>
+            <TopChart />
+          </QueryClientProvider>
         </div>
         <h2 className=" pl-20 mt-20  pb-[10px]">New Releases</h2>
-        <NewReleases />
-        <NewReleases />
-        <NewReleases />
-        <NewReleases />
-        <NewReleases />
         <NewReleases />
         <NewReleases />
       </header>
