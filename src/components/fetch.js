@@ -4,10 +4,11 @@ const fetchData = () => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "9553e4f813mshf0287be8a40ca26p188074jsn50685f660bd8",
-      "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
+      "X-RapidAPI-Key": process.env.API_KEY,
+      "X-RapidAPI-Host": process.env.API_URL,
     },
   };
+  console.log(process.env.REACT_APP_API_KEY);
 
   fetch(
     "https://spotify23.p.rapidapi.com/search/?q=kanye&type=multi&offset=0&limit=10&numberOfTopResults=5",
